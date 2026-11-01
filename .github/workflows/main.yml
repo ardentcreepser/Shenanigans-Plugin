@@ -1,5 +1,3 @@
-# Builds the plugin on GitHub for free every time you push.
-# The finished .jar shows up under Actions -> (latest run) -> Artifacts -> "Shenanigans".
 name: Build
 
 on:
@@ -23,7 +21,9 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
 
       - name: Build
-        run: ./gradlew build
+        run: |
+          chmod +x gradlew
+          ./gradlew build --no-daemon
 
       - name: Upload plugin jar
         uses: actions/upload-artifact@v7
