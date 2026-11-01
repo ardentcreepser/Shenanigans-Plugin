@@ -1,0 +1,220 @@
+# ============================================================
+#   Shenanigans config
+#   Colors use MiniMessage tags like <red>, <bold>, <gradient:red:gold>
+#   Cheat sheet: https://docs.papermc.io/adventure/minimessage/format/
+#   After editing, run /troll reload
+# ============================================================
+
+prefix: "<dark_gray>[<gradient:#ff5f6d:#ffc371>Shenanigans</gradient>]</dark_gray> "
+
+# Tell other staff (permission shenanigans.notify) when someone uses a troll
+notify-staff: true
+# Write every troll used into the server console/log
+log-to-console: true
+
+# Stops Launch / Rocket / Skydive / Levitate / Hot Potato from killing people with fall damage
+protect-from-fall-damage: true
+
+# Trolls nobody can use. Use the ids from /troll list, e.g. [fakeban, sudo]
+disabled-trolls: []
+
+wand:
+  # The troll a new wand starts on (/troll wand)
+  default-troll: launch
+
+menu:
+  players-title: "<dark_gray>Pick a victim"
+  trolls-title: "<dark_gray>Trolling <dark_red><player>"
+
+# How long "toggle" trolls last, in seconds. 0 = until you turn it off yourself.
+durations:
+  freeze: 0
+  spin: 5
+  lag: 30
+  drunk: 30
+  hiccups: 60
+  tiny: 120
+  giant: 120
+  moon: 60
+  nojump: 60
+  shortarms: 120
+  snail: 60
+  turbo: 30
+  bouncy: 60
+  iceskates: 60
+  stairmaster: 60
+  greasy: 120
+  panic: 10
+  hotpotato: 10
+  uwu: 0
+  backwards: 0
+  caps: 0
+  scramble: 0
+  silly: 0
+  shadowmute: 0
+  border: 30
+  haunt: 60
+  dirtdrops: 0
+  nomine: 60
+  noplace: 60
+  regen: 120
+  boompick: 120
+  disco: 60
+  glow: 60
+  lonely: 60
+  noise: 10
+  fakexp: 20
+  fakelowhp: 10
+
+# Used by Fake Chat, Sudo and Embarrassing Chat when you don't type your own message
+silly-phrases:
+  - "I still sleep with a nightlight"
+  - "I think creepers are just misunderstood"
+  - "Does anyone know how to craft a crafting table?"
+  - "I'm scared of chickens"
+  - "pineapple belongs on pizza and I will die on this hill"
+  - "I named my dog after the server owner"
+  - "brb my mom is calling me for dinner"
+  - "Is this Fortnite?"
+  - "I have never seen a diamond in my life"
+  - "I just fell in lava for the 7th time today"
+  - "The admins are the coolest people ever"
+  - "I put ketchup on my cereal"
+  - "can someone teach me how to jump"
+  - "I lost to a baby zombie again"
+
+# Settings for single trolls
+trolls:
+  fakeban:
+    reason: "Being too good at the game."
+    broadcast: true
+    broadcast-message: "<red><player> was banned by an admin. Reason: <reason>"
+  fakecrash:
+    # Picked at random. <lang:...> uses Minecraft's own translated text.
+    messages:
+      - "Internal Exception: java.net.SocketException: Connection reset"
+      - "Internal Exception: io.netty.handler.codec.DecoderException: java.lang.IndexOutOfBoundsException: readerIndex(17) + length(1) exceeds writerIndex(17)"
+      - "<lang:disconnect.timeout>"
+      - "Internal Exception: java.io.IOException: An existing connection was forcibly closed by the remote host"
+      - "Internal Exception: io.netty.handler.timeout.ReadTimeoutException"
+  fakeadvancement:
+    # "Title|Description"
+    list:
+      - "Certified Noob|Die to a baby zombie"
+      - "Professional Faller|Take fall damage 100 times"
+      - "Dirt Collector|Have a whole inventory of dirt"
+      - "Chicken Whisperer|Be scared of a chicken"
+      - "Skill Issue|Lose to literally anything"
+      - "Lava Swimmer|Discover the floor is lava. Again."
+      - "Touch Grass|Finally go outside"
+  fakehacker:
+    format: "<dark_gray>[<red>AntiCheat</red>]</dark_gray> <white><player></white> <gray>failed</gray> <red><hack></red> <gray>(VL: <vl>)</gray>"
+    hacks: ["KillAura", "Fly", "Reach", "X-Ray", "Speed", "AutoClicker", "Scaffold", "NoFall"]
+  fakerestart:
+    message: "<red><bold>[Server]</bold> Restarting in <yellow><seconds></yellow> seconds!"
+  title:
+    default-title: "<gradient:red:gold>You've been trolled!"
+    default-subtitle: "<gray>get rekt"
+  virus:
+    file-name: "free_robux.exe"
+  launch:
+    power: 3.0
+  skydive:
+    height: 150
+  levitate:
+    seconds: 6
+  sneeze:
+    say-achoo: true
+  randomtp:
+    radius: 1000
+  tiny:
+    value: 0.2
+  giant:
+    value: 3.0
+  moon:
+    value: 0.012
+  nojump:
+    value: 0.0
+  shortarms:
+    block-reach: 0.6
+    entity-reach: 0.0
+  snail:
+    value: 0.025
+  turbo:
+    value: 0.4
+  bouncy:
+    value: 0.85
+  iceskates:
+    value: 0.1
+  stairmaster:
+    value: 2.5
+  chatwipe:
+    after: "<gray><italic>where did your chat go?"
+  spam:
+    word: "TROLLED"
+  cage:
+    block: GLASS
+    seconds: 15
+  webtrap:
+    seconds: 10
+  anvilrain:
+    count: 10
+    hurt: true
+    # Half-hearts. 4 = 2 hearts per anvil at most.
+    max-damage: 4
+  fakediamonds:
+    radius: 6
+    chance: 0.25
+    seconds: 60
+  border:
+    size: 3.0
+  tnt:
+    fuse-ticks: 50
+  lightning:
+    # false = just the flash and sound. true = real lightning that hurts and starts fires!
+    real: false
+  fire:
+    seconds: 5
+  bees:
+    count: 6
+    seconds: 25
+  silverfish:
+    count: 10
+    seconds: 25
+  animalrain:
+    count: 16
+    seconds: 30
+  fireworks:
+    count: 10
+  diamondrain:
+    item: DIAMOND
+    count: 30
+  blind:
+    seconds: 10
+  lazy:
+    seconds: 20
+  dizzy:
+    seconds: 15
+  hunger:
+    seconds: 30
+
+messages:
+  no-permission: "<red>You don't have permission to do that."
+  players-only: "<red>Only players can do that."
+  player-not-found: "<red>Couldn't find an online player called <white><player></white>."
+  nobody-online: "<red>There's nobody to troll."
+  unknown-troll: "<red>There's no troll called <white><troll></white>. Try <yellow>/troll list</yellow>."
+  troll-disabled: "<red><troll> is disabled in the config."
+  protected: "<red><player> is protected from trolls."
+  troll-failed: "<red>Couldn't use <troll>: <gray><reason>"
+  troll-error: "<red>Something went wrong with <troll>. Check the console."
+  applied: "<green>Used <yellow><troll></yellow> on <white><player></white>."
+  applied-many: "<green>Used <yellow><troll></yellow> on <white><count></white> players."
+  toggled-on: "<green>Turned on <yellow><troll></yellow> for <white><player></white> <gray>(<duration>)."
+  toggled-off: "<gray>Turned off <yellow><troll></yellow> for <white><player></white>."
+  until-stopped: "until you stop it"
+  stopped-all: "<gray>Stopped <white><count></white> troll(s) on <white><player></white>."
+  no-active: "<gray>Nobody is being trolled right now. Suspicious..."
+  notify: "<gray><italic><sender> used <troll> on <player>"
+  wand-given: "<green>Here's your Troll Wand <gray>(<yellow><troll></yellow>)<green>. Point at a player and right-click!"
+  reloaded: "<green>Config reloaded."

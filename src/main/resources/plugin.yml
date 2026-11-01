@@ -1,0 +1,49 @@
+name: Shenanigans
+version: '${version}'
+main: com.shenanigans.ShenanigansPlugin
+api-version: '26.3'
+description: A huge pile of harmless (mostly) trolls and fun stuff for your server.
+authors: [Shenanigans]
+website: https://papermc.io
+
+commands:
+  troll:
+    description: Troll a player, open the troll menu, and more.
+    usage: /troll help
+    aliases: [shenanigans, trolls]
+
+permissions:
+  shenanigans.*:
+    description: Everything in Shenanigans.
+    default: op
+    children:
+      shenanigans.use: true
+      shenanigans.troll.*: true
+      shenanigans.all: true
+      shenanigans.wand: true
+      shenanigans.reload: true
+      shenanigans.notify: true
+  shenanigans.use:
+    description: Use /troll and the troll menu.
+    default: op
+  shenanigans.troll.*:
+    description: Use every troll. Give single trolls with shenanigans.troll.<id>
+    default: op
+  shenanigans.all:
+    description: Troll every online player at once with *
+    default: op
+  shenanigans.wand:
+    description: Get and use the Troll Wand.
+    default: op
+  shenanigans.reload:
+    description: Reload the config.
+    default: op
+  shenanigans.notify:
+    description: See when other staff use trolls.
+    default: op
+  shenanigans.bypass:
+    description: You can't be trolled.
+    default: false
+  shenanigans.bypass.override:
+    description: Troll people even if they have shenanigans.bypass.
+    default: false
