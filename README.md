@@ -20,27 +20,6 @@ Everything is built to be **harmless to your server**: no real bans, no client-c
 2. Put `Shenanigans-1.0.0.jar` into your server's `plugins` folder.
 3. Restart the server. A `plugins/Shenanigans/config.yml` file gets created.
 
-## Building the .jar
-
-You need the source code turned into a `.jar` file first. Pick **one** way:
-
-### Option A — Let GitHub build it (no installs needed)
-1. Make a free GitHub account and create a new repository.
-2. Upload everything in this folder (including the hidden `.github` folder).
-3. Open the **Actions** tab, click the latest **Build** run, and download **Shenanigans** under *Artifacts*. Unzip it — the `.jar` is inside.
-
-### Option B — Build on your own computer
-1. Install **Java 25** (for example Temurin from https://adoptium.net).
-2. Open a terminal in this folder and run:
-   - Windows: `gradlew.bat build`
-   - Mac/Linux: `./gradlew build`
-3. The plugin is at `build/libs/Shenanigans-1.0.0.jar`.
-
-The first build downloads Gradle and the Paper API, so it takes a minute or two.
-
-### Option C — IntelliJ IDEA
-Open this folder in IntelliJ (Community Edition is free), wait for it to load, then open the Gradle panel on the right and run **Tasks → build → build**.
-
 ## Commands
 
 | Command | What it does |
